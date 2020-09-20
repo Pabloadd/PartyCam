@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<video id="video" class="video" autoplay ></video>
+	
+	<Script>
+		navigator.getUserMedia = (navigator.getUserMedia ||
+		                            navigator.webkitGetUserMedia ||
+		                            navigator.mozGetUserMedia || 
+		                            navigator.msGetUserMedia);
+		navigator.getUserMedia (
+
+		   // constraints
+		   {
+		      video: true,
+		      audio: false
+		   },
+
+		   // successCallback
+		   function(localMediaStream) {
+		      var video = document.querySelector(video);
+		      video.src = window.URL.createObjectURL(localMediaStream);
+		   },
+		   
+		   // errorCallback
+		   function(err) {
+		    console.log("Ocurrió el siguiente error: " + err);
+		   }
+
+		);
+	</Script>
+</head>
+<body>
+<h1>Hola Mundo</h1>
+</body>
+</html>
