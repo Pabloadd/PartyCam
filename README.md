@@ -3,3 +3,7 @@ Un proyecto web para pasar el tiempo entre amigos a distancia, consiste en un bo
 
 ## Subheader
 Test git lines commands
+
+
+## local development
+1. Open index.html in your browers
